@@ -1,0 +1,88 @@
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* Cleaner white background */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 450px;
+    margin: 60px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    
+    h1 {
+      font-size: 28px; /* Slightly larger font */
+      color: #333; /* Darker color for better contrast */
+      margin-bottom: 25px;
+    }
+  
+    .input-container {
+      display: flex;
+      margin-bottom: 25px;
+      width: 100%;
+  
+      input {
+        padding: 12px;
+        border-radius: 10px; /* More rounded corners */
+        border: 1px solid #ced4da;
+        flex: 1;
+        margin-right: 10px;
+        transition: border 0.3s ease; /* Smooth focus transition */
+  
+        &:focus {
+          border-color: #007bff; /* Border color change on focus */
+        }
+      }
+  
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 10px; /* More rounded */
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+  
+        &:hover {
+          background-color: #0056b3;
+          transform: scale(1.05); /* Scale up slightly on hover */
+        }
+      }
+    }
+  
+    .task-list {
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+  
+      li {
+        background-color: #f0f4f8;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease; /* Background color on hover */
+  
+        &:hover {
+          background-color: #e0e7ec; /* Slightly lighter on hover */
+        }
+  
+        button {
+          background-color: #dc3545;
+          color: white;
+          border: none;
+          padding: 8px 12px;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+  
+          &:hover {
+            background-color: #c82333;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+  

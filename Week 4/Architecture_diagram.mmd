@@ -1,0 +1,30 @@
+graph TD
+    A[User Interface] -->|Sends requests| B[Web Server]
+    B -->|Forwards requests| C[API Gateway]
+    C -->|Routes to| D[Order Service]
+    C -->|Routes to| E[User Service]
+    C -->|Routes to| F[Payment Service]
+    C -->|Routes to| G[Restaurant Service]
+    C -->|Routes to| H[Delivery Service]
+    
+    D -->|Interacts with| I[(Database)]
+    E -->|Interacts with| I
+    F -->|Processes payments via| J[External Payment API]
+    G -->|Interacts with| I
+    H -->|Interacts with| I
+
+    subgraph User Flow
+        A
+    end
+
+    subgraph Backend
+        B
+        C
+        D
+        E
+        F
+        G
+        H
+        I
+        J
+    end
